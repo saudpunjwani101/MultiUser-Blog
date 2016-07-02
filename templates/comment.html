@@ -1,0 +1,65 @@
+{% extends 'navbar.html' %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<div class="container-fluid">
+							<div class="col-md-1 text-left">
+								<img class="people-avatar-size" src="{{photo.url}}">
+							</div>
+							<div class="col-md-4 pad-right text-center" id="panel-heading-pad-right">
+								<h5 class="username">{{username}}</h5>
+								<p>Posted on:</p>
+							</div>
+						</div>	
+					</div>
+					<div class="panel-body">
+						<div class="container-fluid">
+							<p class="pad-left" id="post-text">{{post.content}}</p>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<div class="container-fluid">
+							<form action="{{url_for('Comment', post_id=post.id, username=username)}}" method="post">
+								
+								<div class="col-md-10">
+									<textarea class="form-control" name="tweet" id="post-width" rows="1" placeholder="Comment..."></textarea>
+								</div>
+
+								<div class="col-md-2">
+									<button class="pull-right glyphicon glyphicon-edit btn btn-primary" type="submit">	
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-7">
+				<div class="panel panel-default">
+					<div class="panel-heading">	
+						<h4>Comments</h4>
+					</div>
+					{% for tweet in tweets %}
+					<div class="panel-body">
+						<div class="container-fluid">
+							<div class="col-md-1">
+								<img class="people-avatar-size" src="{{tweet.user.profile_photo_url}}" alt="userphoto">
+							</div>
+							<div class="col-md-6">
+								<h4 id="comment-user-style" class="text-center">{{tweet.user.username}}</h4>
+								<p id="comment-style">{{tweet.content}}</p>
+							</div>
+						</div>
+					</div>
+					<hr>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

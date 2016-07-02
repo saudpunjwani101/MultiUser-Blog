@@ -1,0 +1,21 @@
+{% extends "navbar.html" %}
+{% block content %}
+	<div class="container">
+			<form action="{{url_for('editPost', post_id=post.id)}}" method="post">
+				
+				<div class="form-group col-md-offset-3">
+					<textarea class="form-control" name="post" id="post-width" rows="3" placeholder="{{post.content}}"></textarea>
+				</div>
+
+				<div class="form-group col-md-offset-3 col-md-5 pad-top">
+					<button type="submit" class="btn btn-primary btn-block">Edit</button>
+				</div>
+			</form>
+			
+				<div class="form-group col-md-offset-3 col-md-5 pad-top">
+					<a href="{{url_for('Home')}}">
+						<button type="submit" class="btn btn-default btn-block">Cancel</button>
+					</a>
+				</div>
+	</div>
+{% endblock %}

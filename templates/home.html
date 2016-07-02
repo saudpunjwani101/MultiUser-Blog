@@ -1,0 +1,78 @@
+{% extends "navbar.html" %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title username">{{login}}</h3>
+					</div>
+
+					<div class="panel-body text-center bg-grey">
+						<img class="img-responsive img-polaroid" src="{{photo.url}}" alt="userphoto">
+					</div>
+
+					<div class="panel-footer">
+						<a href="{{url_for('uploadUserImage')}}">
+							<span class="glyphicon glyphicon-plus text-center">Photo</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="container-fluid">
+							<form action="{{url_for('Home')}}" method="post">
+								<div class="col-md-7">
+									<textarea class="form-control" name="post" id="post-width" rows="2" placeholder="What's on your mind?"></textarea>
+								</div>
+
+								<div class="col-md-2 pull-right pad-top margin-left">
+									<button type="submit" class="btn btn-primary">Post</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-md-offset-3 col-md-7">
+				<div class="panel panel-default">
+					{% for post in posts %}
+					<div class="panel-body">
+						<div class="container-fluid">
+							<div class="col-md-1">
+								<img class="user-box-image avatar-size" src="{{photo.url}}" alt="photo">
+							</div>
+							<div class="col-md-7">
+								<h5 id="post-user-heading" class="text-center">{{login}}</h5>
+								<p id="post-content">{{post.content}}</p>
+							</div>
+							<div class="pull-right dropup" id="drop-button">
+								<button class="glyphicon glyphicon-option-horizontal btn btn-primary dropdown-toggle" id="dropdownmenu" data-toggle="dropdown">
+								</button>
+								<ul class="dropdown-menu">
+									<li class="dropdown-header">Edit</li>
+									<li>
+										<a href="{{url_for('editPost', post_id=post.id)}}">Edit Post</a>
+									</li>
+									<li>
+										<a href="{{url_for('deletePost', post_id=post.id)}}">Delete Post</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="{{url_for('Comment', username=login, post_id=post.id)}}">Comment</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<hr>
+					{% endfor %}	
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,187 @@
+hr {
+	border-width: 2px;
+}
+
+.flash-message {
+	color: red;
+}
+
+.poster {
+	height: 650px;		
+}
+
+.box {
+	border: 10px;
+}
+
+.username {
+	font-family: 'Kanit', sans-serif;
+	text-transform: uppercase;
+}
+
+.pad-allover {
+	padding: 8px;
+}
+
+.like-button {
+	color: blue;
+}
+
+.pad-top {
+	padding-top: 10px;
+}
+
+.panel-title {
+	font-family: 'Kanit', sans-serif;
+}
+
+.panel {
+	border: 0px;
+}
+
+.navbar-text {
+	font-size: 15px;
+	margin: 1px;
+	font-family: 'Kanit', sans-serif;
+}
+
+.pad-left {
+	padding-left: 10px;
+}
+
+.margin-left {
+	padding-left: 40px;
+}
+
+.pad-left-more {
+	padding-left: 80px;
+}
+
+.setup-pad {
+	padding-left: 167px;
+	padding-top: 80px;
+}
+
+.user-box-image {
+	position: absolute;
+}
+
+.avatar-size {
+	width: 65px;
+	height: 60px;
+	border-radius: 4px;
+}
+
+.people-avatar-size {
+	width: 65px;
+	height: 60px;
+	border-radius: 4px;
+	margin-top: 20px;
+}
+
+.little-to-right {
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+.pad-right {
+	padding-right: 100px;
+}
+
+.go-right {
+	margin-left: 780px;
+}
+
+.bg-white {
+	background-color: white;
+}
+
+#main-motto {
+	font-family: 'Kanit', sans-serif;
+}
+
+#post-width {
+	width: 500px;
+}
+
+#people-heading {
+	font-family: 'Kanit', sans-serif;
+}
+
+#sign-header {
+	padding-top: 150px;
+	font-family: 'Kanit', sans-serif;
+}
+
+#error-center{
+	padding-top: 50px;
+}
+
+#header-logo {
+	background-color: black;
+	height: 36px;
+	color: white;
+	font-size: 20px;
+}
+
+#header-text {
+	font-family: 'Kanit', sans-serif;
+	float: right;
+	padding-right: 10px;
+}
+
+#vertical-line{
+	height: 300px;
+	border-left: grey solid 1px;
+	left: 150px;
+}
+
+#post-center {
+	padding-left: 200px;
+}
+
+#post-text {
+	font-size: 14px;
+	font-family: 'Kanit', sans-serif;
+}
+
+#panel-heading-pad-right {
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#footer-text {
+	font-family: 'Kanit', sans-serif;
+}
+
+#comment-user-style {
+	font-family: 'Kanit', sans-serif;
+	margin-right: 90px;
+	margin-top: 20px;
+}
+
+#comment-style {
+	font-family: 'Kanit', sans-serif;
+	margin-left: 30px;
+}
+
+#post-user-heading {
+	font-family: 'Kanit', sans-serif;
+	padding-right: 150px;
+	font-size: 17px;
+}
+
+#post-content {
+	font-family: 'Kanit', sans-serif;
+	padding-left: 35px;
+	padding-top: 30px;
+}
+
+#drop-button {
+	margin-top: 70px;
+}
+
+
+
+
+

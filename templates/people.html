@@ -1,0 +1,24 @@
+{% extends "navbar.html" %}
+{% block content %}
+	<div class="container">
+			<div class="row">
+			<div class="col-md-12">
+				<h2 id="people-heading">Users:</h2>
+				{% for user in users %}
+					<article class="box">
+						<img class="user-box-image avatar-size" src="{{user.profile_photo_url}}">
+						<header class="pad-left-more">
+							<h3 class="username">{{user.username}}</h3>
+						</header>
+						<footer class="pad-left-more">
+							<a href="{{url_for('Friend', username=user.username, post_id=post_id)}}">
+								<small>See more</small>
+							</a>
+						</footer>
+						<hr>	
+					</article>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
